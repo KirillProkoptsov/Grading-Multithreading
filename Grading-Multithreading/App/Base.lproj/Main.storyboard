@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Characters List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CharactersListViewController" customModule="Grading_Multithreading" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Snj-Ep-vS8">
+                                <rect key="frame" x="16" y="71" width="361" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="J64-gd-PPi"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puz-ci-yaZ">
+                                <rect key="frame" x="275.66666666666669" y="117" width="101.33333333333331" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="XVj-Mc-gx8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="101.33" id="sl8-gc-AAV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Сбросить"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Cc5-ea-d58">
+                                <rect key="frame" x="0.0" y="163" width="393" height="643"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVv-g6-wyO">
+                                <rect key="frame" x="16" y="117" width="104" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="1VZ-9r-BSi"/>
+                                    <constraint firstAttribute="height" constant="34" id="LY3-37-WZy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Загрузить"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cc5-ea-d58" firstAttribute="top" secondItem="FVv-g6-wyO" secondAttribute="bottom" constant="12" id="0Hj-ZL-jWO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cc5-ea-d58" secondAttribute="bottom" constant="12" id="6eh-As-lHH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cc5-ea-d58" secondAttribute="trailing" id="9dd-2N-kcY"/>
+                            <constraint firstItem="Cc5-ea-d58" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Btt-mp-n7H"/>
+                            <constraint firstItem="Snj-Ep-vS8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="F38-jx-dfB"/>
+                            <constraint firstItem="FVv-g6-wyO" firstAttribute="top" secondItem="Snj-Ep-vS8" secondAttribute="bottom" constant="16" id="KzF-I1-aAH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Snj-Ep-vS8" secondAttribute="trailing" constant="16" id="Ped-PC-adP"/>
+                            <constraint firstItem="puz-ci-yaZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FVv-g6-wyO" secondAttribute="trailing" constant="8" symbolic="YES" id="WmX-xR-PbJ"/>
+                            <constraint firstItem="puz-ci-yaZ" firstAttribute="top" secondItem="Snj-Ep-vS8" secondAttribute="bottom" constant="16" id="Xen-03-9J3"/>
+                            <constraint firstItem="Snj-Ep-vS8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="Zok-jq-XfN"/>
+                            <constraint firstItem="FVv-g6-wyO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cSy-Oi-cmQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="puz-ci-yaZ" secondAttribute="trailing" constant="16" id="raQ-4S-jEj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadButton" destination="FVv-g6-wyO" id="vhr-Nj-Kp5"/>
+                        <outlet property="resetButton" destination="puz-ci-yaZ" id="VNV-Fb-GmY"/>
+                        <outlet property="segmentControl" destination="Snj-Ep-vS8" id="vbX-Nt-Wae"/>
+                        <outlet property="tableView" destination="Cc5-ea-d58" id="0vc-5D-dxT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
